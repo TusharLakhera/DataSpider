@@ -1,9 +1,9 @@
 from fastapi import Depends, HTTPException
 from fastapi.security import APIKeyHeader
 
-API_KEY = "your-api-key"
-api_key_header = APIKeyHeader(name="X-API-Key")
+internal_auth_token = "XXXX-YYYY-ZZZZ-AAAA"
+auth_token = APIKeyHeader(name="AUTH-TOKEN")
 
-def authenticate(api_key: str = Depends(api_key_header)):
-    if api_key != API_KEY:
+def authenticate(auth_token: str = Depends(auth_token)):
+    if auth_token != internal_auth_token:
         raise HTTPException(status_code=401, detail="Invalid API key")
