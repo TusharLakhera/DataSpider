@@ -6,18 +6,18 @@ This is based on event driven architecture once the request is been made server 
 
 
 1. **storage of products**
-  <img width="1244" alt="product-data" src="***Scraping Results***![Screenshot 2024-07-21 at 11 31 58 PM](https://github.com/user-attachments/assets/8cea4a3e-a9c2-4ff3-a7a8-3245e912f4c5)">
+  <img width="1244" alt="product-data" src="https://github.com/user-attachments/assets/8cea4a3e-a9c2-4ff3-a7a8-3245e912f4c5">
 
   
 2. **Notifications on scraping each page**
 
-  <img width="765" alt="notifications" src="![Screenshot 2024-07-21 at 11 31 19 PM](https://github.com/user-attachments/assets/856a97e6-e571-4eaa-8fe0-38bd9fca8b84)">
+  <img width="765" alt="notifications" src="https://github.com/user-attachments/assets/856a97e6-e571-4eaa-8fe0-38bd9fca8b84">
 
   
 3. **storing results in cache which will be only used to update the database if there any price changes**
      
   
-   <img width="1435" alt="cachin in redis" src="![Screenshot 2024-07-21 at 11 33 06 PM](https://github.com/user-attachments/assets/9a6b1d42-264a-4628-ad1d-8cd9c47f3190)">
+   <img width="1435" alt="cachin in redis" src="https://github.com/user-attachments/assets/9a6b1d42-264a-4628-ad1d-8cd9c47f3190">
 
 
 ## Prerequisites
