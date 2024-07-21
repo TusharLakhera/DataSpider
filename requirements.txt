@@ -1,5 +1,9 @@
 fastapi
+uvicorn[standard]
 requests
+aiohttp
 beautifulsoup4
 pydantic
 redis
+aioredis
+aiofiles

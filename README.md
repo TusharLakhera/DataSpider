@@ -1,6 +1,26 @@
 # Data-Spider
 Data Spider is a powerful web scraping tool built with Python and FastAPI. It allows you to effortlessly scrape product information from a catalogue website and store the scraped data in a structured JSON format. The scraper is designed to be run inside a Docker container, providing a seamless and hassle-free setup process.
 
+FLOW:
+This is based on event driven architecture once the request is been made server will immediately accept or reject the response if accepted will create a background task which will  take queue of tasks as input...every task in queue is single page of the website ...scraper will process this queue in FIFO form and keep adding the scraped results of that page in products.json file as well as in redis for caching purpose
+
+***Scraping Results***
+1. **storage of products**
+     
+  <img width="1244" alt="product-data" src=">
+
+  
+2. **Notifications on scraping each page**
+
+  <img width="765" alt="notifications" src="">
+
+  
+3. **storing results in cache which will be only used to update the database if there any price changes**
+     
+  
+   <img width="1435" alt="cachin in redis" src="">
+
+
 ## Prerequisites
 
 Before diving into the installation and setup process, ensure that you have the following prerequisites installed on your system:
@@ -18,8 +38,8 @@ Follow these step-by-step instructions to set up and run the Data Spider scraper
    Start by cloning the Data Spider repository to your local machine. Open a terminal and run the following command:
 
    ```bash
-   git clone https://github.com/your-username/data-spider.git
-   cd data-spider
+   git clone 
+   cd Data-Spider
    
 2.  **docker commands to initialise app**:
     Build the Docker Image:
@@ -34,13 +54,26 @@ Follow these step-by-step instructions to set up and run the Data Spider scraper
     
     make sure to replace the auth token with right key provided
     ```bash
-        curl --location 'localhost:8000/scrape?max_pages=10&proxy=' \
-        --header 'AUTH-TOKEN: ****-****-'
+        curl --location --request POST 'localhost:8000/scrape?max_pages=10&proxy=' \
+        --header 'AUTH-TOKEN: XXXX-YYYY-ZZZZ-AAAA'
     ```
     fast api doc link
     ```
     http://localhost:8000/docs
 
     ```
-    
 
+    <img width="1383" alt="fastAPI docs" src="">
+    <img width="1369" alt="API results" src="">
+
+4. ***cached results can be checked by entering redis container using below commands***
+
+   ```bash
+    docker exec -it <container-id> sh
+    redis-cli
+   ```
+   
+   <img width="976" alt="redis-container" src="">
+
+
+   
