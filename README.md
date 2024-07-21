@@ -4,21 +4,20 @@ Data Spider is a powerful web scraping tool built with Python and FastAPI. It al
 FLOW:
 This is based on event driven architecture once the request is been made server will immediately accept or reject the response if accepted will create a background task which will  take queue of tasks as input...every task in queue is single page of the website ...scraper will process this queue in FIFO form and keep adding the scraped results of that page in products.json file as well as in redis for caching purpose
 
-***Scraping Results***
+
 1. **storage of products**
-     
-  <img width="1244" alt="product-data" src=">
+  <img width="1244" alt="product-data" src="***Scraping Results***![Screenshot 2024-07-21 at 11 31 58 PM](https://github.com/user-attachments/assets/8cea4a3e-a9c2-4ff3-a7a8-3245e912f4c5)">
 
   
 2. **Notifications on scraping each page**
 
-  <img width="765" alt="notifications" src="">
+  <img width="765" alt="notifications" src="![Screenshot 2024-07-21 at 11 31 19 PM](https://github.com/user-attachments/assets/856a97e6-e571-4eaa-8fe0-38bd9fca8b84)">
 
   
 3. **storing results in cache which will be only used to update the database if there any price changes**
      
   
-   <img width="1435" alt="cachin in redis" src="">
+   <img width="1435" alt="cachin in redis" src="![Screenshot 2024-07-21 at 11 33 06 PM](https://github.com/user-attachments/assets/9a6b1d42-264a-4628-ad1d-8cd9c47f3190)">
 
 
 ## Prerequisites
@@ -62,9 +61,7 @@ Follow these step-by-step instructions to set up and run the Data Spider scraper
     http://localhost:8000/docs
 
     ```
-
-    <img width="1383" alt="fastAPI docs" src="">
-    <img width="1369" alt="API results" src="">
+    <img width="1369" alt="API results" src="https://github.com/user-attachments/assets/43947d9e-bf0c-4c30-a4ce-818e4aae980e">
 
 4. ***cached results can be checked by entering redis container using below commands***
 
