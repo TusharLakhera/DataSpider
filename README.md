@@ -69,8 +69,5 @@ Follow these step-by-step instructions to set up and run the Data Spider scraper
     docker exec -it <container-id> sh
     redis-cli
    ```
-   
-   <img width="976" alt="redis-container" src="">
-
 
    
