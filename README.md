@@ -38,7 +38,7 @@ Follow these step-by-step instructions to set up and run the Data Spider scraper
 
    ```bash
    git clone 
-   cd Data-Spider
+   cd DataSpider
    
 2.  **docker commands to initialise app**:
     Build the Docker Image:
